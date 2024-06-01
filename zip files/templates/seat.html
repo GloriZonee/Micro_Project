@@ -1,0 +1,111 @@
+<!-- seat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='seat1.css') }}">
+    <title>SELECT YOUR SEATS</title>
+</head>
+<body>
+    <h1>SELECT YOUR SEATS</h1>
+    <div class="container">
+        <div class="plane">
+            <div class="fid">
+                <form method="POST" action="{{ url_for('submit') }}">
+                    <label for="flightId">Select Flight ID:</label>
+                    <select name="flightId" id="flightId" required>
+                        <option value="" disabled selected>Select Flight ID</option>
+                        <option value="A001">A001</option>
+                        <option value="A002">A002</option>
+                        <option value="A003">A003</option>
+                        <option value="A004">A004</option>
+                        <option value="A005">A005</option>
+                        <option value="A006">A006</option>
+                    </select>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                
+                    <div class="seats">
+                        <div class="seat" id="s1"><span>1</span></div>
+                        <div class="seat" id="s2"><span>2</span></div>
+                        <div class="seat" id="s3"><span>3</span></div>
+                        <div class="seat" id="s4"><span>4</span></div>
+                        <div class="seat" id="s5"><span>5</span></div>
+                        <div class="seat" id="s6"><span>6</span></div>
+                        <div class="seat" id="s7"><span>7</span></div>
+                        <div class="seat" id="s8"><span>8</span></div>
+                        <div class="seat" id="s9"><span>9</span></div>
+                        <div class="seat" id="s10"><span>10</span></div>
+                    </div>
+                
+                    <!-- Add a single hidden input field for selected seats -->
+                    <input type="hidden" name="selectedSeats" id="selectedSeatsInput" value="">
+                
+                    <!-- Button for Pay Now -->
+                    <div class="loki">
+                        <button type="submit" class="button" id="submit">
+                            <li><a href="{{ url_for('confirmation')}}" target="_blank" title="book now">BOOK NOW</a></li>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+      // Get all the seat elements
+      var seats = document.getElementsByClassName("seat");
+  
+      // Array to store selected seat IDs
+      var selectedSeats = [];
+  
+      // Add a click event listener to each seat
+      for (var i = 0; i < seats.length; i++) {
+          seats[i].addEventListener("click", function () {
+              // Toggle the selected class on the clicked seat
+              this.classList.toggle("selected");
+  
+              // Update the selectedSeats array
+              updateSelectedSeats();
+          });
+      }
+  
+      // Function to update the hidden input field value
+      function updateSelectedSeats() {
+          // Reset the array
+          selectedSeats = [];
+  
+          // Get all the selected seats
+          var selected = document.getElementsByClassName("selected");
+  
+          // Loop through the selected seats and push their ids to the array
+          for (var i = 0; i < selected.length; i++) {
+              selectedSeats.push(selected[i].id);
+          }
+  
+          // Update the hidden input field value
+          document.getElementById("selectedSeatsInput").value = selectedSeats.join(",");
+      }
+  
+      // Get the submit button element
+      var submit = document.getElementById("submit");
+  
+      // Add a click event listener to the submit button
+      submit.addEventListener("click", function () {
+          // Alert the seat ids or a message if none is selected
+          if (selectedSeats.length > 0) {
+              alert("You have selected seats: " + selectedSeats.join(", "));
+              console.log(selectedSeats);
+          } else {
+              alert("Please select at least one seat.");
+          }
+      });
+  </script>
+  
+</body>
+</html>

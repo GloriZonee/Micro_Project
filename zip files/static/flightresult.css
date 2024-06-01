@@ -1,0 +1,49 @@
+      body {
+            background-image: url("./redandwhiteback.jpg");
+            background-color: #cccccc;
+            font-family: Arial, sans-serif;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(8, 7, 7);  /* Set text color to contrast with the background */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;  /* Add some margin from the top */
+            background: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the table */
+            padding: 20px; /* Add padding to the table */
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        button {
+            display: block;
+            width: 25%;
+            margin: 10px 0;
+            padding-left: 100px;
+            background-color: #d91f2c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+            display: inline-block;
+            color: #cccccc;
+        }
+        .but{
+            padding-left: 650px;
+        }

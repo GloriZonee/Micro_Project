@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/flightresult.css">
+    <title>Flight Booking Form</title>
+</head>
+<body>
+   
+    <br>
+    <br>
+    <br>
+
+    <h1 style="color:red;">FLIGHT BOOKING FORM</h1>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <table border="1">
+        <tr>
+            <th>Arrival Location</th>
+            <th>Departure Location</th>
+            <th>Departure Date</th>
+            <th>Arrival Date</th>
+        </tr>
+        {% for flight in flights %}
+            <tr>
+                <td>{{ flight.arrival_loc }}</td>
+                <td>{{ flight.departure_loc }}</td>
+                <td>{{ flight.departure_date }}</td>
+                <td>{{ flight.arrival_date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+     <br>
+     <br>
+     <br>
+     <div class="but">
+    <button type="submit">
+        <li><a href="{{ url_for('flight_results')}}" target="_blank" title="search" style="color: white;">SEARCH FLIGHTS</a></li>
+    </button>
+    <br>
+    <br>
+        <button type="submit">
+        <li><a href="{{ url_for('seat_selection')}}" target="_blank" title="book now" style="color: white;">BOOK NOW</a></li>
+    </button>
+    </div>
+</body>
+</html>

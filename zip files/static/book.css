@@ -1,0 +1,73 @@
+/* flight_reservation.css */
+body {
+  background-image: url("redandwhiteback.jpg");
+  background-color: #cccccc;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+img {
+  opacity: 0.5;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position:absolute;
+  align-items: center;
+  top: 200px;
+}
+
+.container {
+  margin: 200px auto 0 auto;
+  width: 500px;
+  margin: 150px auto 0 auto; /* added top margin of 50px */
+  padding: 20px;
+  border: 2px solid #d91f2c;
+  border-radius: 20px;
+}
+.small-image {
+  width: 500px;
+  height: auto;
+}
+
+h1 {
+  color: #d91f2c;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input, select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #d91f2c;
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  width: auto;
+  display: inline-block;
+}
+
+.gender {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #d91f2c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

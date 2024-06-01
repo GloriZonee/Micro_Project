@@ -1,0 +1,77 @@
+<!-- confirmation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+            background-image: url("/static/redandwhiteback.jpg");
+            background-color: #cccccc;
+            font-family: Arial, sans-serif;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        .confirmation-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h2 {
+            color: red;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .cancel-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #DC3545;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+        <br>
+        <br> 
+        <br>
+        <br>
+        <br>
+    <div class="confirmation-container">
+        <h2>Flights Booked!</h2>
+        <p>Your flights have been successfully booked. We look forward to having you on board!</p>
+    </div>
+         <br>
+         <br> 
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
+    <!-- Cancel Button -->
+    <a href="{{ url_for('cancel')}}" class="cancel-button">Cancel tickets? </a>
+
+</body>
+</html>

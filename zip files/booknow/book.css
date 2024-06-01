@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+  
+  select, input, button {
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .grp{
+    padding-top: 75px;
+    background-image:url(background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+}
+
+  .btn {
+    background-color: #1abc9c;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Make it a block-level element to center it */
+  }
+  
+  .btn:hover {
+    background-color: #16a085;
+  }
+  .planereserve{
+
+      padding-left: 50px;
+      font-size: x-large;
+      background-color: rgb(8, 132, 173);
+      padding-top: 10px;
+      padding-bottom: 10px;
+  
+  }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In Page</title>
+    <!-- link to the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='sign_in.css') }}">
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h1>SIGN IN</h1>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">
+                <li><a href="{{ url_for('index')}}" target="_blank" title="to create a new account" style="color: white;">SIGN-IN</a></li>
+            </button>
+    
+        </form>
+        <p>Don't have an account ?<a href="{{ url_for('sign_up')}}" style="color: rgb(19, 11, 11);">Sign up here</a></p>
+    </div>
+</body>
+</html>

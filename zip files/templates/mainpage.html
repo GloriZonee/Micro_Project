@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon type" image=jpeg href="/newzip/zip files/static/main page icon.jpg">
+    <title style="font-style: bold;">Rajagiri Airways</title>
+    <link rel="stylesheet" href="../static/mainpage.css">
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename='rajagiriairlogo.jpg') }}" alt="Rajagiri Air Logo" style="margin-bottom: -15px;">
+    
+
+    <div class="overlay-text"></div>
+    <div class="white">
+        <a href="/white scr.webp"> </a>
+    </div>
+    <div class="login" >
+    <div class="nav-links" style="margin-top: -150px;" >
+        <button class="button button1">
+            <li><a href="{{ url_for('sign_up')}}" target="_blank" title="to create a new account">SIGN-UP</a></li>
+        </button>
+
+        <button class="button button2">
+            <li><a href="{{ url_for('sign_in')}}" target="_blank" title="to log in">SIGN-IN</a></li>
+        </button>
+    </div>
+    </div>
+
+</body>
+</html>

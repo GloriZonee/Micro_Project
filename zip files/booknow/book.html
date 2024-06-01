@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+ <html>
+        <head>
+          <link rel="icon type"image/jpeg href="main page icon.jpg"> 
+          <title>BOOK NOW</title>
+          <link rel="stylesheet" href="book.css">
+        </head>
+      <body>
+        <div class=" planereserve">
+          <h1>Plane Reservation</h1>
+        </div>
+            <div class="container">
+             <form action="submit.php" method="post">
+                  <div class="grp">
+
+                    <div class="form-group">
+                      <label for="Booking ID">Booking ID:</label>
+                      <input type="text" id="Booking ID" placeholder="b2000" minlength="0" maxlength="10" required width="300px" height="30px">
+                  </div>
+                   
+                  
+                  
+                    <div class="form-group">
+                       <label for="start">To:</label>
+                          <select id="start" name="start">
+                            <option value="Cochin">Kochi</option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Pune">Pune</option>
+                
+                          </select>
+                   </div>
+                        <div class="form-group">
+                          <label for="destination">From:</label>
+                          <select id="destination" name="destination">
+                            <option value="Cochin">Kochi</option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Pune">Pune</option>
+                          </select>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="Departure date">Departure date:</label>
+                          <input type="date" id="Departure date">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Arrival date">Arrival date:</label>
+                        <input type="date" id="Arrival date">
+                      </div>
+                         
+
+                            <div class="form-group">
+                              <label for="time">Time:</label>
+                              <input type="time" id="time" name="time">
+                            </div>
+
+                            <div class="form-group">
+                              <label for="pasgn_no">pasgn no:</label>
+                              <input type="number" id="pasgn_no" min="0" max="100" value="1">
+                          </div>
+                      
+                          <button type="submit" class="btn">Search Flight</button>
+                      </div>
+                   </form>
+                 </div>
+             </div>
+        </body>
+</html>
